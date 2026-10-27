@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PlantBeacon – Plant Care Guides for Home, Balcony & Garden</title>
+<meta name="description" content="PlantBeacon offers clear, practical plant care guides: watering, light, soil, repotting, pests and seasonal tips for indoor plants, balconies and gardens.">
+
+<!-- ===== GOOGLE ADSENSE CODE (head me sirf ek baar) =====
+     ca-pub-XXXXXXXXXXXXXXXX ki jagah apni AdSense Publisher ID dalo -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+<style>
+:root{--forest:#1f4d3a;--leaf:#3f8f62;--cream:#fbf8f1;--sand:#f1ebdd;--clay:#c8553d;--ink:#26322c;--mut:#65726a;--line:#e4dccb}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,"Times New Roman",serif;background:var(--cream);color:var(--ink);line-height:1.8;font-size:18px}
+h1,h2,h3,h4,nav,.btn,.tag,th,summary,.toc{font-family:"Segoe UI",Roboto,Arial,sans-serif}
+a{color:var(--clay);text-decoration:none}
+.wrap{width:100%;max-width:1360px;margin:0 auto;padding:0 32px}
+/* top bar */
+.top{background:var(--forest);color:#fff}
+.bar{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;font:800 25px "Segoe UI",Arial,sans-serif}
+.logo span{color:#f6c177}
+nav a{color:#e6f2ea;margin-left:28px;font-size:15px;font-weight:600}
+nav a:hover{color:#f6c177}
+/* hero split */
+.hero{background:var(--sand);padding:80px 0;border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+.tag{display:inline-block;background:var(--forest);color:#fff;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:30px;margin-bottom:18px}
+.hero h1{font-size:clamp(34px,4.6vw,56px);line-height:1.15;color:var(--forest);margin-bottom:18px}
+.hero p{color:var(--mut);font-size:20px;margin-bottom:28px}
+.btn{display:inline-block;background:var(--clay);color:#fff;padding:14px 32px;border-radius:8px;font-weight:700;font-size:16px}
+.btn:hover{background:#a8432e}
+.art{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:0 14px 40px rgba(31,77,58,.12);text-align:center}
+.art svg{width:100%;max-width:340px;height:auto}
+/* four basics strip */
+.strip{background:#fff;border-bottom:1px solid var(--line)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip div{padding:26px 18px;text-align:center;border-right:1px solid var(--line);font:600 16px "Segoe UI",Arial,sans-serif;color:var(--forest)}
+.strip div:last-child{border:0}
+.strip b{display:block;font-size:28px}
+section{padding:72px 0}
+h2{font-size:34px;color:var(--forest);line-height:1.25;margin-bottom:12px}
+h3{font-size:22px;color:var(--forest);margin:28px 0 8px}
+.lead{color:var(--mut);max-width:800px;margin-bottom:34px}
+/* topics: numbered list tiles */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tile{background:#fff;border:1px solid var(--line);border-left:6px solid var(--leaf);border-radius:10px;padding:22px 24px}
+.tile h3{margin:0 0 6px;font-size:20px}
+.tile p{font-size:16px;color:var(--mut)}
+.num{font:800 14px "Segoe UI",Arial,sans-serif;color:var(--clay);letter-spacing:1px}
+/* guide with TOC */
+.guide{background:#fff}
+.layout{display:grid;grid-template-columns:260px 1fr;gap:56px}
+.toc{position:sticky;top:20px;align-self:start;background:var(--sand);border-radius:14px;padding:24px;font-size:15px}
+.toc h4{color:var(--forest);margin-bottom:10px;font-size:16px}
+.toc a{display:block;color:var(--ink);padding:6px 0;border-bottom:1px dashed var(--line)}
+.toc a:hover{color:var(--clay)}
+.article p{margin-bottom:18px}
+.article ul{margin:0 0 18px 24px}
+.article li{margin-bottom:8px}
+.callout{background:var(--sand);border-left:5px solid var(--clay);padding:18px 22px;border-radius:8px;margin:22px 0;font-size:17px}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15px;border:1px solid var(--line)}
+th{background:var(--forest);color:#fff;text-align:left;padding:12px}
+td{padding:12px;border-top:1px solid var(--line)}
+/* ads */
+.ad{margin:34px auto;text-align:center;max-width:100%;min-height:100px}
+
+/* faq 2 col */
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 20px}
+summary{font-weight:700;cursor:pointer;color:var(--forest);font-size:16px}
+details p{margin-top:10px;color:var(--mut);font-size:16px}
+/* disclaimer band */
+.disc{background:#2b2417;color:#eadfc4;padding:56px 0}
+.disc h2{color:#f6c177;font-size:26px}
+.disc p{font-size:15.5px;max-width:1100px}
+footer{background:var(--forest);color:#cfe3d6;padding:44px 0 22px;font:15px/1.7 "Segoe UI",Arial,sans-serif;text-align:center}
+footer a{color:#f6c177;margin:0 10px}
+footer p{max-width:900px;margin:12px auto}
+#cookie{position:fixed;bottom:16px;left:16px;right:16px;max-width:760px;margin:auto;background:var(--forest);color:#fff;padding:16px 20px;border-radius:10px;font:14px "Segoe UI",Arial,sans-serif;display:flex;gap:16px;align-items:center;z-index:99}
+#cookie button{background:#f6c177;color:#3b2a00;border:0;padding:9px 20px;border-radius:6px;font-weight:700;cursor:pointer}
+@media(max-width:900px){.hero .wrap,.layout,.faq-grid{grid-template-columns:1fr}.tiles{grid-template-columns:1fr}.strip .wrap{grid-template-columns:1fr 1fr}.toc{position:static}nav{display:none}h2{font-size:28px}}
+</style>
+</head>
+<body>
+
+<div class="top">
+<div class="wrap bar">
+  <a class="logo" href="#top" aria-label="PlantBeacon home">
+    <svg width="42" height="42" viewBox="0 0 64 64" aria-hidden="true">
+      <circle cx="32" cy="32" r="30" fill="#f6c177"/>
+      <path d="M32 54V30" stroke="#1f4d3a" stroke-width="4" stroke-linecap="round"/>
+      <path d="M32 34C32 22 22 18 13 19c0 11 7 17 19 15z" fill="#3f8f62"/>
+      <path d="M32 30c0-11 9-16 19-15 0 11-8 17-19 15z" fill="#1f4d3a"/>
+      <circle cx="32" cy="11" r="4" fill="#c8553d"/>
+    </svg>
+    Plant<span>Beacon</span>
+  </a>
+  <nav><a href="#topics">Topics</a><a href="#guide">Plant Care Guide</a><a href="#faq">FAQ</a><a href="#disclaimer">Disclaimer</a></nav>
+</div>
+</div>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <span class="tag">Plant care education</span>
+      <h1>Your Guiding Light for Healthier, Happier Plants</h1>
+      <p>PlantBeacon is an educational website with simple, trustworthy plant care guides for indoor plants, balconies and home gardens.</p>
+      <a class="btn" href="#guide">Read the Guide</a>
+    </div>
+    <div class="art">
+      <svg viewBox="0 0 300 300" aria-label="Potted plant illustration">
+        <circle cx="150" cy="150" r="140" fill="#f1ebdd"/>
+        <path d="M105 210h90l-12 62h-66z" fill="#c8553d"/>
+        <rect x="98" y="198" width="104" height="16" rx="6" fill="#a8432e"/>
+        <path d="M150 198V100" stroke="#1f4d3a" stroke-width="6" stroke-linecap="round"/>
+        <path d="M150 150C150 112 118 96 86 102c2 36 24 58 64 48z" fill="#3f8f62"/>
+        <path d="M150 124c0-36 28-52 62-48-2 36-24 56-62 48z" fill="#1f4d3a"/>
+        <circle cx="150" cy="78" r="9" fill="#f6c177"/>
+        <path d="M128 60a30 30 0 0 1 0 36M172 60a30 30 0 0 0 0 36" stroke="#f6c177" stroke-width="4" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="strip"><div class="wrap">
+  <div><b>☀️</b>Light</div><div><b>💧</b>Water</div><div><b>🪴</b>Soil</div><div><b>🌬️</b>Airflow</div>
+</div></div>
+
+<!-- AD SLOT 1 -->
+<div class="wrap">
+  <div class="ad">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1111111111" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+</div>
+
+<section id="topics">
+<div class="wrap">
+  <h2>What You Can Learn on PlantBeacon</h2>
+  <p class="lead">A beacon is a light that helps travellers find their way. PlantBeacon does the same for plant lovers, with clear answers on light, water, soil and everyday care, and without confusing jargon.</p>
+  <div class="tiles">
+    <div class="tile"><span class="num">01</span><h3>Light Needs</h3><p>Bright direct, bright indirect and low light explained, and how to read the windows in your home.</p></div>
+    <div class="tile"><span class="num">02</span><h3>Watering</h3><p>How to check soil moisture and avoid the most common beginner mistake, overwatering.</p></div>
+    <div class="tile"><span class="num">03</span><h3>Soil & Pots</h3><p>Choosing potting mix, drainage holes and the right pot size for different plants.</p></div>
+    <div class="tile"><span class="num">04</span><h3>Repotting</h3><p>Signs a plant needs more room and how to repot gently with less stress.</p></div>
+    <div class="tile"><span class="num">05</span><h3>Common Pests</h3><p>Early signs of aphids and spider mites, plus gentle ways to manage them.</p></div>
+    <div class="tile"><span class="num">06</span><h3>Seasonal Care</h3><p>Adjusting watering, light and feeding as the seasons change.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="guide" class="guide">
+<div class="wrap layout">
+  <aside class="toc">
+    <h4>In this guide</h4>
+    <a href="#g1">1. Understand light</a>
+    <a href="#g2">2. Watering</a>
+    <a href="#g3">3. Soil and pots</a>
+    <a href="#g4">4. Repotting</a>
+    <a href="#g5">5. Feeding</a>
+    <a href="#g6">6. Pests and problems</a>
+    <a href="#g7">7. Seasons</a>
+  </aside>
+
+  <div class="article">
+    <h2>The Complete Beginner’s Plant Care Guide</h2>
+    <p>Healthy plants are not about luck or a “green thumb”. They grow well when four basics are in balance: light, water, soil and airflow. This guide explains each one in plain language so you can care for your plants with confidence.</p>
+
+    <h3 id="g1">1. Understand Light First</h3>
+    <p>Light is a plant’s food source. Most common houseplants prefer bright, indirect light, which means a spot near a window where the sun does not directly burn the leaves. Stretching stems, small pale leaves or leaning growth often suggest too little light, while brown crispy patches can suggest too much direct sun. Rotate pots every week or two so all sides get light.</p>
+
+    <h3 id="g2">2. Water Based on the Plant, Not the Calendar</h3>
+    <p>Instead of watering on fixed days, check the soil: push a finger two to three centimetres into it. If it feels dry, water thoroughly until the excess drains out of the bottom. If it still feels damp, wait. Always empty saucers so roots do not sit in water.</p>
+    <ul>
+      <li>Succulents and cacti: let soil dry out fully between waterings.</li>
+      <li>Leafy tropical plants: water when the top layer is dry.</li>
+      <li>Ferns and moisture lovers: keep soil lightly moist, never soggy.</li>
+    </ul>
+
+    <!-- AD SLOT 2 (in-article) -->
+    <div class="ad">
+      <ins class="adsbygoogle" style="display:block;text-align:center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="2222222222"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <h3 id="g3">3. Choose Good Soil and the Right Pot</h3>
+    <p>Roots need both moisture and air. A good potting mix holds some water but drains well, and adding perlite or coarse sand helps plants that dislike wet feet. Always use a pot with drainage holes, and choose a size only slightly larger than the root ball, because an oversized pot keeps soil wet for too long.</p>
+    <div class="callout"><b>Tip:</b> If water runs straight through and out of the pot, the mix may be too dry or compacted. Soak the pot from below for a few minutes.</div>
+
+    <h3 id="g4">4. Know When to Repot</h3>
+    <p>Roots growing out of the drainage holes, water rushing straight through, or stalled growth can be signs a plant needs a new pot. Repot in the active growing season, usually spring or early summer. Loosen the roots gently, place the plant in fresh mix and water lightly afterwards.</p>
+
+    <h3 id="g5">5. Feed Lightly</h3>
+    <p>More fertiliser is not better. During spring and summer, a diluted, balanced plant fertiliser every few weeks is usually enough for many houseplants. Follow the product label and reduce or stop feeding in colder, slower months.</p>
+
+    <h3 id="g6">6. Watch for Pests and Problems</h3>
+    <p>Check the undersides of leaves when you water. Sticky residue, tiny moving dots, fine webbing or sudden leaf drop deserve attention. Isolate affected plants, wipe leaves with a damp cloth and try gentle methods first. Good airflow and clean leaves prevent many problems.</p>
+    <div class="scroll">
+    <table>
+      <tr><th>What you see</th><th>Possible cause</th><th>What to check</th></tr>
+      <tr><td>Yellow lower leaves</td><td>Overwatering or natural ageing</td><td>Soil moisture, drainage</td></tr>
+      <tr><td>Brown crispy tips</td><td>Dry air or irregular watering</td><td>Watering routine, humidity</td></tr>
+      <tr><td>Long, leggy stems</td><td>Not enough light</td><td>Move closer to a bright window</td></tr>
+      <tr><td>Drooping leaves</td><td>Too dry or too wet</td><td>Feel the soil before watering</td></tr>
+    </table>
+    </div>
+
+    <h3 id="g7">7. Adjust With the Seasons</h3>
+    <p>Most plants grow slower in winter. They need less water and little or no fertiliser, but may need to move closer to light as days shorten. In summer, check soil more often and protect plants from harsh afternoon sun and hot glass.</p>
+
+    <!-- AD SLOT 3 -->
+    <div class="ad">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="3333333333" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="faq">
+<div class="wrap">
+  <h2>Frequently Asked Questions</h2>
+  <p class="lead">Quick answers to common plant care questions.</p>
+  <div class="faq-grid">
+    <details><summary>What is PlantBeacon?</summary><p>PlantBeacon is an educational website that publishes general plant care guides for homes, balconies and gardens.</p></details>
+    <details><summary>How do I know if I am overwatering?</summary><p>Constantly wet soil, yellowing leaves and a musty smell are common signs. Let the soil dry slightly and make sure the pot drains well.</p></details>
+    <details><summary>Do all plants need direct sunlight?</summary><p>No. Many houseplants prefer bright, indirect light, and direct sun can scorch some of them.</p></details>
+    <details><summary>Is your advice suitable for every plant?</summary><p>Our guides are general. Species and climates differ, so always check the needs of your specific plant.</p></details>
+  </div>
+</div>
+</section>
+
+<!-- AD SLOT 4 -->
+<div class="wrap">
+  <div class="ad">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="4444444444" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+</div>
+
+<div class="disc" id="disclaimer">
+<div class="wrap">
+  <h2>Disclaimer</h2>
+  <p>The content on PlantBeacon is provided for general educational and informational purposes only. Plant care results vary by species, climate, light and growing conditions, and we cannot guarantee any specific outcome. Our content is not professional horticultural, medical, veterinary or legal advice. Some plants are toxic to pets or children if eaten, so please research each plant before bringing it home and consult a qualified professional or poison helpline in an emergency. Use fertilisers and pest treatments strictly according to their product labels. This website displays third-party advertisements, including those served by Google. Advertisers are responsible for their own content, and an ad does not mean we endorse the product or service. We are not responsible for the content of external websites linked from this page.</p>
+</div>
+</div>
+</main>
+
+<footer>
+<div class="wrap">
+  <div class="logo" style="justify-content:center;margin-bottom:8px">Plant<span>Beacon</span></div>
+  <p><a href="#topics">Topics</a><a href="#guide">Guide</a><a href="#faq">FAQ</a><a href="#disclaimer">Disclaimer</a><a href="/privacy-policy">Privacy Policy</a><a href="/terms">Terms of Use</a></p>
+  <p>We use Google AdSense. Google and its partners may use cookies to show ads based on your visits. You can manage ad settings at <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ads Settings</a>.</p>
+  <p>© 2026 PlantBeacon. All rights reserved.</p>
+</div>
+</footer>
+
+<div id="cookie">
+  <span>We use cookies and Google ads to improve your experience. By continuing, you agree to our use of cookies.</span>
+  <button onclick="document.getElementById('cookie').style.display='none'">Accept</button>
+</div>
+
+</body>
+</html>
